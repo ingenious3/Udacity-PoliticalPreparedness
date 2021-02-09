@@ -22,11 +22,7 @@ abstract class ElectionDatabase: RoomDatabase() {
             synchronized(this) {
                 var instance = INSTANCE
                 if (instance == null) {
-                    instance = Room.databaseBuilder(
-                            context.applicationContext,
-                            ElectionDatabase::class.java,
-                            "election_database"
-                    )
+                    instance = Room.databaseBuilder(context.applicationContext, ElectionDatabase::class.java, Election.TABLE_NAME)
                             .fallbackToDestructiveMigration()
                             .build()
 

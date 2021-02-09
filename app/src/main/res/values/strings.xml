@@ -2,6 +2,26 @@
 <resources>
     <string name="app_name">Political Preparedness</string>
 
-    <!-- TODO: Add necessary string values -->
-
+    <string name="upcoming_elections">Upcoming Elections</string>
+    <string name="saved_elections">Saved Elections</string>
+    <string name="representatives">Representatives</string>
+    <string name="elections">Elections</string>
+    <string name="find_my_representatives">Find My Representatives</string>
+    <string name="no_representatives_found">No representatives found</string>
+    <string name="no_elections_found">No elections found</string>
+    <string name="loading_elections">Loading Elections ...</string>
+    <string name="election_information">Election Information</string>
+    <string name="follow_election">Follow election</string>
+    <string name="unfollow_election">Unfollow election</string>
+    <string name="correspondence_address">Correspondence Address</string>
+    <string name="representative_search">Search Representative</string>
+    <string name="my_representatives">My Representatives</string>
+    <string name="use_my_location">Use My Location</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="state">State</string>
+    <string name="location_services_disabled">Location services must be enabled to display representatives using location</string>
+    <string name="location_permission_denied">Location permission must be granted to display representatives using location</string>
 </resources>

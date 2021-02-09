@@ -1,14 +1,13 @@
-package com.example.android.politicalpreparedness.election
-
+package com.example.android.politicalpreparedness.representative
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class ElectionsViewModelFactory(val app: Application) : ViewModelProvider.Factory {
+class RepresentativeViewModelFactory(val app: Application) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(ElectionsViewModel::class.java)) {
-            return ElectionsViewModel(app) as T
+        if (modelClass.isAssignableFrom(RepresentativeViewModel::class.java)) {
+            return RepresentativeViewModel(app) as T
         } else {
             throw IllegalArgumentException("Unable to construct viewModel")
         }

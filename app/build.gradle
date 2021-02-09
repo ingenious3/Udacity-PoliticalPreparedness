@@ -49,6 +49,7 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle_extensions"
 
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
@@ -61,6 +62,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit: $version_retrofit"
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
     implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.5.0"
 
     // Moshi
     implementation "com.squareup.moshi:moshi:$version_moshi"
@@ -68,10 +70,12 @@ dependencies {
     implementation "com.squareup.moshi:moshi-adapters:$version_moshi"
 
     // Glide
-    //TODO: Add Glide Implementation
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$version_glide"
 
     //Room
     implementation "androidx.room:room-runtime:$version_room"
+    implementation "androidx.room:room-ktx:$version_room"
     kapt "androidx.room:room-compiler:$version_room"
 
     // Location
