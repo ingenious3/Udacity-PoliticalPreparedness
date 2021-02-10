@@ -35,6 +35,7 @@ class RepresentativeFragment : Fragment() {
 
     companion object {
         const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 100
+        const val KEY_ADDRESS = "key_address"
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -49,7 +50,11 @@ class RepresentativeFragment : Fragment() {
         viewModel = ViewModelProvider(requireActivity(),viewModelFactory).get(RepresentativeViewModel::class.java)
         binding.lifecycleOwner = viewLifecycleOwner
         binding.viewModel = viewModel
-        binding.address = Address("", "", "", "California", "")
+        if (savedInstanceState != null) {
+            binding.address = savedInstanceState.getParcelable(KEY_ADDRESS)
+        } else {
+            binding.address = Address("", "", "", "California", "")
+        }
         viewModel.setAddress(binding.address)
 
         val states = resources.getStringArray(R.array.states)
@@ -132,4 +137,8 @@ class RepresentativeFragment : Fragment() {
         imm.hideSoftInputFromWindow(requireView().windowToken, 0)
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(KEY_ADDRESS, binding.address)
+    }
 }

@@ -2,4 +2,13 @@
 <resources>
     <dimen name="default_padding">8dp</dimen>
     <dimen name="normal_margin">16dp</dimen>
+    <dimen name="text_20sp">20sp</dimen>
+    <dimen name="text_16sp">16sp</dimen>
+    <dimen name="view_0dp">0dp</dimen>
+    <dimen name="view_24dp">24dp</dimen>
+    <dimen name="text_14sp">14sp</dimen>
+    <dimen name="view_88dp">88dp</dimen>
+    <dimen name="view_56dp">56dp</dimen>
+    <item name="constraint0.5" format="float" type="dimen">0.5</item>
+    <item name="letter0.01" format="float" type="dimen">0.01</item>
 </resources>

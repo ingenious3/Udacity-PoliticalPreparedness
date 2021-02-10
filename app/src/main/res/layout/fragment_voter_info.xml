@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/election_name"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/view_0dp"
             android:layout_height="wrap_content"
             android:padding="@dimen/default_padding"
             android:text="@{viewModel.election.name}"
@@ -29,7 +29,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Election name" />
+            tools:text="@string/election_name" />
 
         <TextView
             android:id="@+id/election_date"
@@ -38,17 +38,15 @@
             android:layout_margin="@dimen/default_padding"
             android:text="@{viewModel.election.electionDay.toString()}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-            app:layout_constraintTop_toBottomOf="@id/election_name"
-            tools:text="12 November 2055" />
+            app:layout_constraintTop_toBottomOf="@id/election_name" />
 
         <TextView
             android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textSize="16sp"
-            android:letterSpacing="0.01"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:textSize="@dimen/text_16sp"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
@@ -86,11 +84,10 @@
             android:id="@+id/correspondence_address_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginBottom="@dimen/normal_margin"
             android:text="@string/correspondence_address"
-            android:textSize="16sp"
-            android:letterSpacing="0.01"
+            android:textSize="@dimen/text_16sp"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
@@ -102,7 +99,7 @@
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/default_padding"
             android:text="@{viewModel.voterInfo.state.get(0).electionAdministrationBody.correspondenceAddress.toFormattedString()}"
             android:visibility="@{TextUtils.isEmpty(viewModel.voterInfo.state.get(0).electionAdministrationBody.correspondenceAddress.toFormattedString()) ? View.GONE : View.VISIBLE}"
             app:layout_constraintStart_toStartOf="@id/election_date"
@@ -113,7 +110,7 @@
             style="@style/LandingButtonsStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_margin="@dimen/normal_margin"
             android:onClick="@{() -> viewModel.saveElection(viewModel.election)}"
             android:text="@{(!viewModel.election.isSaved()) ? @string/follow_election : @string/unfollow_election}"
             app:layout_constraintBottom_toBottomOf="parent"

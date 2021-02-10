@@ -24,4 +24,6 @@
     <string name="state">State</string>
     <string name="location_services_disabled">Location services must be enabled to display representatives using location</string>
     <string name="location_permission_denied">Location permission must be granted to display representatives using location</string>
+    <string name="election_name">Election Name</string>
+    <string name="election_date">Election Date</string>
 </resources>

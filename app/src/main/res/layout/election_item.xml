@@ -26,13 +26,12 @@
             android:layout_height="wrap_content"
             android:textStyle="normal"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:letterSpacing="0.01"
+            android:textSize="@dimen/text_16sp"
             android:textColor="@android:color/black"
             android:text="@{election.name}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Election Name" />
+            tools:text="@string/election_name" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/election_date"
@@ -41,12 +40,11 @@
             android:text="@{election.electionDay.toString()}"
             android:textStyle="normal"
             android:textAllCaps="false"
-            android:textSize="14sp"
-            android:letterSpacing="0.01"
+            android:textSize="@dimen/text_14sp"
             android:textColor="@color/colorPrimary"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/election_name"
-            tools:text="Election Date" />
+            tools:text="@string/election_date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
