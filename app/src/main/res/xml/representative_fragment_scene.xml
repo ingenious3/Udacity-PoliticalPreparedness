@@ -90,7 +90,7 @@
             app:layout_constraintTop_toBottomOf="@id/representative_title" />
 
         <Constraint
-            android:id="@+id/representatives_fragment_recycler_view"
+            android:id="@+id/representatives_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -183,7 +183,7 @@
             app:layout_constraintTop_toBottomOf="@id/representative_title" />
 
         <Constraint
-            android:id="@+id/representatives_fragment_recycler_view"
+            android:id="@+id/representatives_recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -197,7 +197,7 @@
         app:duration="3000">
         <OnSwipe
             motion:dragDirection="dragUp"
-            motion:touchAnchorId="@+id/representatives_fragment_recycler_view"
+            motion:touchAnchorId="@+id/representatives_recyclerView"
             motion:touchAnchorSide="top" />
     </Transition>
     <Transition
@@ -206,7 +206,7 @@
         app:duration="3000">
         <OnSwipe
             motion:dragDirection="dragDown"
-            motion:touchAnchorId="@+id/representatives_fragment_recycler_view"
+            motion:touchAnchorId="@+id/representatives_recyclerView"
             motion:touchAnchorSide="bottom" />
     </Transition>
 </MotionScene>
